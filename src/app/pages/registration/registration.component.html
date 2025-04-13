@@ -1,0 +1,75 @@
+<div class="registration-container">
+    <h1>Regisztráció</h1>
+    
+    @if (isLoading) {
+      <div class="loading-container">
+        <h2>Regisztráció folymatban</h2>
+        <mat-spinner diameter="50"></mat-spinner>
+        <p>Kérlek várj...</p>
+      </div>
+    }
+
+    <div *ngIf="registrationError" class="error-message">
+      {{ registrationError }}
+    </div>
+  
+    @if (showForm) {
+      <form [formGroup]="registrationForm" (ngSubmit)="registration()" class="registration-form">
+        <div formGroupName="name" class="name-row">
+          <mat-form-field>
+            <mat-label>Keresztnév</mat-label>
+            <input matInput formControlName="firstname" />
+            <mat-error *ngIf="registrationForm.get('name.firstname')?.hasError('required')">
+              A keresztnév megadása kötelező!
+            </mat-error>
+            <mat-error *ngIf="registrationForm.get('name.firstname')?.hasError('minlength')">
+              A keresztnévnek legalább 2 karakter hosszúnak kell lennie!
+            </mat-error>
+          </mat-form-field>
+  
+          <mat-form-field>
+            <mat-label>Vezetéknév</mat-label>
+            <input matInput formControlName="lastname" />
+            <mat-error *ngIf="registrationForm.get('name.lastname')?.hasError('required')">
+              A vezetéknév megadása kötelező!
+            </mat-error>
+            <mat-error *ngIf="registrationForm.get('name.lastname')?.hasError('minlength')">
+              A vezetéknévnek legalább 2 karakter hosszúnak kell lennie!
+            </mat-error>
+          </mat-form-field>
+        </div>
+  
+        <mat-form-field>
+          <mat-label>Email</mat-label>
+          <input matInput formControlName="email" type="email" />
+          <mat-error *ngIf="registrationForm.get('email')?.hasError('required')">
+            Az email megadása kötelező!
+          </mat-error>
+          <mat-error *ngIf="registrationForm.get('email')?.hasError('email')">
+            Érvénytelen email formátum!
+          </mat-error>
+        </mat-form-field>
+  
+        <mat-form-field>
+          <mat-label>Jelszó</mat-label>
+          <input matInput formControlName="password" type="password" />
+          <mat-error *ngIf="registrationForm.get('password')?.hasError('required')">
+            A jelszó megadása kötelező!
+          </mat-error>
+          <mat-error *ngIf="registrationForm.get('password')?.hasError('minlength')">
+            A jelszónak legalább 6 karakter hosszúnak kell lennie!
+          </mat-error>
+        </mat-form-field>
+  
+        <mat-form-field>
+          <mat-label>Jelszó megerősítése</mat-label>
+          <input matInput formControlName="rePassword" type="password" />
+          <mat-error *ngIf="registrationForm.get('rePassword')?.hasError('required')">
+            A jelszó megerősítése kötelező!
+          </mat-error>
+        </mat-form-field>
+  
+        <button mat-raised-button color="primary" type="submit" [disabled]="isLoading">Regisztráció</button>
+      </form>
+    }
+  </div>

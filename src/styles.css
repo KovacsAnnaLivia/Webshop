@@ -1,0 +1,22 @@
+html, body { height: 100%; }
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+    background-color: #FFF2E1;
+    position: relative; 
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('assets/hatterkep.png'); /* A háttérkép elérési útvonala */
+    background-size: cover; /* A kép kitölti a teljes területet */
+    background-position: center; /* A kép középre igazítása */
+    background-repeat: no-repeat; /* A kép ne ismétlődjön */
+    opacity: 0.8; /* A háttérkép átlátszósága */
+    z-index: -1; /* A háttérkép a tartalom mögött marad */
+}

@@ -1,0 +1,113 @@
+<!--
+<div class="products-container">
+  <div class="product-card" *ngFor="let product of products">
+    <img [src]="product.imageUrl" alt="{{ product.name }}" class="product-image" />
+    <h2>{{ product.name }}</h2>
+    <p>{{ product.description }}</p>
+    <p class="price">{{ product.price }}</p>
+    <button mat-flat-button color="primary" (click)="addToCart(product)">Kosárba</button>
+  </div>
+</div>
+-->
+<div class="products-container">
+  <mat-card class="product-card" appearance="outlined">
+    <mat-card-header>
+      <div mat-card-avatar class="product-image"></div>
+      <mat-card-title>Váza</mat-card-title>
+      <mat-card-subtitle>Zöld színű vázák</mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image src="assets/product/vase3.png" alt="Zöld váza">
+    <mat-card-content>
+      <p>
+        A zöld színű váza egy elegáns és modern kiegészítő, amely bármely térben kiemelkedő szerepet játszik. Kiváló minőségű anyagból készült, tartós és könnyen tisztítható. Ideális választás virágok, növények vagy akár önálló díszként is.
+      </p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-flat-button color="#D1BB9E" id="vaza" [routerLink]="['/compare']">Összehasonlítás</button>
+    </mat-card-actions>
+  </mat-card>
+  <mat-card class="product-card" appearance="outlined">
+    <mat-card-header>
+      <div mat-card-avatar class="product-image"></div>
+      <mat-card-title>Szobor</mat-card-title>
+      <mat-card-subtitle>Golden retriver szobor</mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image src="assets/product/statue1.png" alt="Kutya szobor">
+    <mat-card-content>
+      <p>
+        A golden retriever szobor egy gyönyörű és részletesen kidolgozott dísztárgy, amely a kutyák szerelmeseinek tökéletes ajándék. Kiváló minőségű anyagból készült, tartós és időtálló. Ideális választás otthoni dekorációhoz vagy ajándéknak.
+      </p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-flat-button color="#D1BB9E" id="kutyaszobor" [routerLink]="['/compare']">Összehasonlítás</button>
+    </mat-card-actions>
+  </mat-card>
+  <mat-card class="product-card" appearance="outlined">
+    <mat-card-header>
+      <div mat-card-avatar class="product-image"></div>
+      <mat-card-title>Óra</mat-card-title>
+      <mat-card-subtitle>Fekete alapú arany mutatóju óra</mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image src="assets/product/clock1.png" alt="Óra">
+    <mat-card-content>
+      <p>
+        A fekete alapú arany mutatós óra egy elegáns és stílusos dekoráció, amely bármely térben kiemelkedő szerepet játszik. Kiváló minőségű anyagból készült, tartós és pontos. Ideális választás otthoni vagy irodai használatra.  
+      </p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-flat-button color="#D1BB9E" id="ora" [routerLink]="['/compare']">Összehasonlítás</button>
+    </mat-card-actions>
+  </mat-card>
+
+  <!--  -->
+
+  <mat-card class="product-card" appearance="outlined">
+    <mat-card-header>
+      <div mat-card-avatar class="product-image"></div>
+      <mat-card-title>Lámpa</mat-card-title>
+      <mat-card-subtitle>Fehér mennyezeti lámpa </mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image src="assets/product/lamp4.png" alt="Fehér lámpa">
+    <mat-card-content>
+      <p>
+        A fehér mennyezeti lámpa egy modern és elegáns megjelenést nyújt, amely bármely helyiségben tökéletesen mutat. Ideális választás otthoni vagy irodai használatra.  
+      </p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-flat-button color="#D1BB9E" id="lampa" [routerLink]="['/compare']">Összehasonlítás</button>
+    </mat-card-actions>
+  </mat-card>
+  <mat-card class="product-card" appearance="outlined">
+    <mat-card-header>
+      <div mat-card-avatar class="product-image"></div>
+      <mat-card-title>Falfesték</mat-card-title>
+      <mat-card-subtitle>Falfesték egyénileg kikeverhető színekkel</mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image src="assets/product/paint.png" alt="Falfesték">
+    <mat-card-content>
+      <p>
+        Különböző színekben és árnyalatokban kapható, így mindenki megtalálhatja a számára legmegfelelőbbet. Könnyen tisztítható, így gyerekek és házi állatok mellé is ajánlott. 
+      </p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-flat-button color="#D1BB9E" id="festek" [routerLink]="['/compare']">Összehasonlítás</button>
+    </mat-card-actions>
+  </mat-card>
+  <mat-card class="product-card" appearance="outlined">
+    <mat-card-header>
+      <div mat-card-avatar class="product-image"></div>
+      <mat-card-title>Párna</mat-card-title>
+      <mat-card-subtitle>Dekorációs párna</mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image src="assets/product/pillow.png" alt="Párna">
+    <mat-card-content>
+      <p>
+        A dekorációs párnák egy stílusos és kényelmes kiegészítők, melyekkel könynedén lehet bármilyen szobába egy kis színt vinni. Kiváló minőségű anyagból készült, tartós és könnyen tisztítható. Ideális választás kanapékhoz vagy ágyakhoz. 
+      </p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-flat-button color="#D1BB9E" id="parna" [routerLink]="['/compare']">Összehasonlítás</button>
+    </mat-card-actions>
+  </mat-card>
+</div>
+

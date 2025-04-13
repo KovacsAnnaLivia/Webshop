@@ -1,0 +1,94 @@
+.products-container {
+    display: flex; /* Flexbox használata */
+    flex-wrap: wrap; /* Ha nem férnek el, törjenek új sorba */
+    gap: 16px;
+    margin-top: 1%;
+    margin-left: 1%;
+    overflow-y: auto;
+}
+
+  
+
+.product-card {
+    flex: 1 1 calc(33.33% - 16px); /* A termékek szélessége 33.33%, mínusz a gap */
+    max-width: calc(33.33% - 16px); /* Maximum szélesség */
+    box-sizing: border-box; /* A padding és border beleszámít a szélességbe */
+}
+
+@media (max-width: 500px) { /* Telefon és kisebb képernyők */
+    .products-container {
+        flex-direction: column; /* A kártyák egymás alá kerülnek */
+        align-items: stretch; /* A kártyák kitöltik a szülő szélességét */
+        gap: 16px; /* Távolság a kártyák között */
+    }
+
+    .product-card {
+        width: 100%; /* A kártya teljes szélességet foglal */
+        max-width: 100%; /* Maximum szélesség 100% */
+        margin: 0; /* Nincs külső margó */
+        box-sizing: border-box; /* A padding és border beleszámít a szélességbe */
+    }
+
+    button{
+        position: relative; /* Relatív pozíció a szülő elemhez képest */
+        top: auto; /* Az alapértelmezett `top` érték eltávolítása */
+        margin-top: 20px; /* Távolság a gomb felett */
+        left: auto; /* Az alapértelmezett `left` érték eltávolítása */
+        transform: none; /* Az alapértelmezett eltolás eltávolítása */
+        display: block; /* A gomb blokkszintű elemként jelenik meg */
+        
+    }
+}
+  
+
+button{
+    display: flex;
+    justify-content: center;
+    /*position: absolute;*/
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #D1BB9E !important; 
+}
+
+.mat-drawer-container{
+    background-color: #A79277 !important;
+}
+
+mat-sidenav-container{
+    background-color: #A79277 !important;
+}
+
+mat-drawer-transition{
+    background-color: #A79277 !important;
+}
+.mat-card-image{
+    height:1%;
+    width: auto;
+    position: absolute;
+}  
+.mdc-card__media {
+    height: 100px; /* Magasság beállítása */
+    width: 100%; /* Szélesség beállítása */
+    object-fit: contain; /* A kép teljes egészében látható lesz */
+    border-radius: 8px; /* Lekerekített sarkok */
+}
+.product-card{
+    height: auto; /* Magasság beállítása */
+    width: auto; /* Szélesség beállítása */
+}
+.product-card > img{
+    height: 10em; /* Magasság beállítása */
+    width: auto; /* Szélesség beállítása */
+    
+}
+.mdc-card__media-content {
+    position: relative; /* Pozicionálás beállítása */
+    padding: 16px; /* Belső margó */
+    background-color: #fff; /* Háttérszín */
+    border-radius: 8px; /* Lekerekített sarkok */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Árnyék hozzáadása */
+}
+mat-card-header{
+    text-align: center;
+}
