@@ -40,10 +40,10 @@ button{
     width: 300px;
     margin: 10px auto;
     @media (max-width: 500px) {
-        width: 95% !important; /* A gomb szélessége a szülő elem 80%-a */
+        width: 95% !important; 
         padding: 4px 10px;  
-        font-size: 14px; /* Kisebb szövegméret */
-        border-radius: 50px; /* Kisebb lekerekítés */
+        font-size: 14px; 
+        border-radius: 50px; 
         position: relative;
         
       }
