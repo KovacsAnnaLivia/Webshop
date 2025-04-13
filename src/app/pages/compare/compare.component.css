@@ -1,13 +1,13 @@
 body {
-  margin: 0; /* Távolítsd el az alapértelmezett margót */
-  height: 100vh; /* Az oldal teljes magassága */
-  display: flex; /* Flexbox használata az elrendezéshez */
+  margin: 0;
+  height: 100vh;
+  display: flex; 
 }
 
 .wall {
-  flex: 1; /* A bal oldal kitölti a rendelkezésre álló hely felét */
-  background-color: blue; /* Kék szín */
-  color: white; /* Fehér szöveg */
+  flex: 1; 
+  background-color: blue; 
+  color: white;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -19,9 +19,9 @@ body {
 }
 
 .other {
-  flex: 1; /* A jobb oldal kitölti a rendelkezésre álló hely felét */
-  background-color: red; /* Piros szín */
-  color: white; /* Fehér szöveg */
+  flex: 1; 
+  background-color: red; 
+  color: white; 
   display: flex;
   justify-content: center;
   align-items: center;
